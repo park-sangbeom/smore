@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="`SMORE` project page">
+  <meta property="og:title"
+    content="Quality-Diversity based Semi-Autonomous Teleoperation using Reinforcement Learning" />
+  <meta property="og:description" content="details about the paper `SMORE`" />
+  <meta property="og:url" content="https://joonhyung-lee.github.io/smore/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="assets/images/fig-overview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="assets/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .image-row {
+      display: flex; /* Use flexbox to create a row layout */
+      flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+      justify-content: space-between; /* Space items evenly along the row */
+    }
+    .image {
+      margin-bottom: 20px; /* Add some space between images */
+      flex-basis: calc(25% - 20px); /* Set the initial size of each image to occupy 25% of the container minus the margin */
+      max-width: calc(25% - 20px); /* Limit the maximum width of each image */
+      flex-grow: 1; /* Allow images to grow to fill the available space */
+      flex-shrink: 1; /* Allow images to shrink if necessary */
+    }
+    figure {
+      text-align: center; /* Center the contents of the figure */
+    }
+  </style>
+
+  <title>Quality-Diversity based Semi-Autonomous Teleoperation using Reinforcement Learning
+  </title>
+  <link rel="icon" type="image/x-icon" href="assets/images/rilab.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="assets/js/fontawesome.all.min.js"></script>
+  <script src="assets/js/bulma-carousel.min.js"></script>
+  <script src="assets/js/bulma-slider.min.js"></script>
+  <script src="assets/js/index.js"></script>
+
+  <!-- Include MathJax Library -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+  <!-- MathJax Configuration -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['$$', '$$']],
+        processEscapes: true,
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] },
+      showMathMenu: false,
+    });
+  </script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Quality-Diversity based Semi-Autonomous Teleoperation using Reinforcement Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://park-sangbeom.github.io/" target="_blank">Sangbeom Park</a><sup>1</sup>,
+                <span class="author-block">
+                  <span class="author-block">Taerim Yoon</a><sup>1</sup>,
+                    <a href="https://joonhyung-lee.github.io/" target="_blank">Joonhyung Lee</a><sup>1</sup>,
+                    <a href="https://hansooworld.github.io/" target="_blank">Sunghyun Park</a><sup>1</sup>,
+                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                  <a href="https://sites.google.com/view/sungjoon-choi/home?authuser=0" target="_blank">Sungjoon
+                    Choi</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors" style="text-align: center;">
+              <span class="author-block">Korea University<sup>1</sup><br></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.11513" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                      <a href="assets/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <!-- Change the link SangBeom -->
+                  <a href="https://github.com/joonhyung-lee/smore" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+
+                <!-- Video Link -->
+                <span class="link-block">
+                  <!-- Change the link SangBeom -->
+                  <a href="https://github.com/joonhyung-lee/smore" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="assets/videos/SPOTS_final_s4.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle" style="text-align: left;">
+        <span style="font-weight: bold; font-size: larger">SPOTS</span>
+        is an approach to a semi-autonomous teleoperation framework that focuses on verifying placement positions with 1) a <span style="font-weight: bold;">Stability Verification</span> (i.e., physics-based simulation) step and 
+        2) <span style="font-weight: bold;">Receptacle Reasoning</span> (i.e., common knowledge) step by utilizing LLMs that understand scene contexts and reason about the corresponding task without learning.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent successes in robot learning have significantly enhanced autonomous systems across a wide range of tasks. 
+              However, they are prone to generate similar or the same solutions, limiting the controllability of the robot to behave according to user intentions. 
+              These limited robot behaviors may lead to collisions and potential harm to humans. 
+              In this paper, we introduce a semi-autonomous teleoperation where the user can operate a robot by selecting a high-level command, referred to as $\textit{option}$ generated by the learned policy. 
+              To generate effective and diverse options, we propose a quality-diversity (QD) based sampling method that simultaneously optimizes both the quality and diversity of options using reinforcement learning (RL). 
+              Additionally, we propose a mixture of latent variable models to learn a policy function defined as multiple option distributions. 
+              In experiments, we show that the proposed method achieves superior performance in terms of the success rate and diversity of the options in simulation environments. 
+              We further demonstrate that our method outperforms manual keyboard control for time duration over cluttered real-world environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Framework Overview -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Framework</h2>
+        <div id="framework" style="text-align: center;">
+          <a href="#framework">
+            <img src="assets/images/fig2_qd_semi_autonomous_teleop.png" alt="MY ALT TEXT" width="80%" />
+          </a>
+          <h2 class="content has-text-justified" style="text-align: left;">
+            Our proposed framework, <span style="font-weight: bold; color: red;">SMORE</span>, consists of two methods. The first is for the QD-based sampling method, which selects context vector-option pairs from the replay buffer based on their high reward values and diversity scores to construct mini-batches. The second method involves a policy gradient approach utilizing a mixture of latent variables. This is designed to learn multiple modes of policy distribution over high-level options, employing the sampled mini-batches.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Framework Overview -->
+
+  <!-- Module Explanations -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">SMORE: <span style="font-weight: bold; color: red;">S</span>electable <span style="font-weight: bold; color: red;">M</span>ultiple <span style="font-weight: bold; color: red;">O</span>ptions via <span style="font-weight: bold; color: red;">RE</span>inforcement learning</h2>
+        <div id="framework" style="text-align: center;">
+          <img src="assets/images/fig3_smore_overview.png" alt="MY ALT TEXT" width="60%" />
+          <h2 class="content has-text-justified" style="text-align: left;">
+            Our approach, <span style="font-weight: bold; color: red;">SMORE</span>, combines a QD-based sampling method with a mixture of latent variable models to learn effective and multiple latent option spaces in a two-step process: 
+            (a) sampling context vector-option pairs based on their high reward value and diversity score from the replay buffer; and (b) learning multiple modes of policy distribution over high-level options for the given task.
+          </h2>
+          <br>
+        </div>
+
+        <div id="module" class="columns">
+          <!-- First Column -->
+          <div class="column is-half">
+            <h2 class="title is-3">LA-QDPP</h2>
+            <div class="item item-video1">
+              <figure class="video-container">
+                <!-- Input the figure of LA-QDPP -->
+                <img src="assets/images/fig_extra_laqdpp.png" alt="MY ALT TEXT" width="100%" />
+                <figcaption class="video-caption">
+                  Results of the proposed sampling method with varying weights of the parameter beta, which prioritize (a) diversity, (b) quality, and (c) quality-diversity aware sampling. 
+                  The parameter beta enables the sampling process to align with the desired policy objective flexibly.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Second Column -->
+          <div class="column is-half">
+            <h2 class="title is-3">MLPG</h2>
+            <div class="item item-video1">
+              <figure class="video-container">
+                <!-- Input the figure of MLPG -->
+                <img src="assets/images/fig_extra_mlpg.png" alt="MY ALT TEXT" width="100%" />
+                <figcaption class="video-caption">
+                  Coverage results for the Reacher-Quadrant task. Our proposed sampling method enhances the performance of diverse option generation across all baselines, achieving high coverage. Significantly, MLPG demonstrates the greatest enhancement in terms of performance within our experiments.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+  </section>
+  <!-- End of module explanations -->
+
+
+  <!-- Simulation Experimental Videos -->
+  <!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">User Interaction</h2>
+      <div id="module">
+        <div id="sim-results" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="assets/videos/sim-shelf-level1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="assets/videos/sim-shelf-level2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="assets/videos/sim-shelf-level3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End of simulation experimental videos -->
+
+  <!-- User Interaction Videos -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">User Interaction</h2>
+        <div id="module">
+          <div id="sim-results">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="assets/videos/user_interaction.mp4" type="video/mp4">
+            </video>
+            <h2 class="content has-text-justified" style="text-align: left;">
+              User interaction with the proposed system SPOTS. The user selects among the candidates, provided with a
+              close consideration of stability and reasonableness, in an interactive viewer. SPOTS recommends the
+              placement candidates based on the prompt of the task.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End of user interaction videos -->
+
+  <!-- Environments -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Environments</h2>
+        <div id="environments" style="text-align: center;">
+          <a href="#environments">
+            <img src="assets/images/fig1_environments.png" alt="MY ALT TEXT" width="80%" />
+          </a>
+          <h2 class="content has-text-justified" style="text-align: left;">
+            We evaluate our method on four different environments. <strong>(a) Reacher-Quadrant Task:</strong> the agent's fingertip moves to the reachable space in a specific goal quadrant, 
+            <strong>(b) Place Task:</strong> The robot arm is required to place a target object in a safe area without causing any collisions, 
+            <strong>(c) Sweep Task:</strong> The robot arm needs to push the blocking objects to grasp a target object. 
+            <strong>(d) Hang Task:</strong> The robot arm hangs a target torus on a hook.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Environments -->
+
+  <!-- Baselines & Metrics -->
+  <section class="hero is-small" style="margin-bottom: 35px;">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Baselines & Metrics</h2>
+        <div id="Baselines & Metrics">
+            <p>We compare the performance of MLPG to Proximal Policy Optimization (PPO)<sup>[1]</sup>, Soft Actor-Critic (SAC)<sup>[2]</sup>, and Deep Latent Policy Gradient (DLPG)<sup>[3]</sup>. To ensure a fair comparison, we use stochastic distributions for both PPO and SAC.</p><ul>
+            <ul>
+              <li><strong>PPO:</strong> PPO is an on-policy RL that ensures stable and efficient policy updates due to its clipped objective function.</li>
+              <li><strong>SAC:</strong> SAC is an off-policy RL that balances exploration and exploitation by adding policy entropy to the reward.</li>
+              <li><strong>DLPG:</strong> DLPG is a latent variable model-based RL that can design the policy to define the distribution over predefined trajectories.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Baselines & Metrics -->
+
+  <!-- Results -->
+  <!-- <section class="hero is-small" style="margin-bottom: 35px;">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Results</h2>
+        <div id="Results">
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End of Results -->
+
+
+  <!-- Real world Experimental Videos -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Real World Demonstration</h2>
+        <div id="module">
+          <div id="realworld">
+            <!-- <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+              <!-- Your video file here -->
+              <!-- <source src="assets/videos/real_world.mp4" type="video/mp4"> -->
+            <!-- </video> -->
+            <a href="#realworld">
+              <img src="assets/images/fig4_realworld.png" alt="MY ALT TEXT" width="100%" />
+            </a>
+
+            <h2 class="content has-text-justified" style="text-align: left;">
+              We validate the practicality of our proposed method for operating a real robot in the Place and Sweep tasks through two main experiments. 
+              First, we evaluate the time efficiency of our approach by comparing our proposed framework and manual control using a keyboard, where the user can move the end-effector in six different directions (i.e., forward, backward, right, left, up, and down).
+              Furthermore, we assess the task performance of our approach in comparison to the baseline algorithms (i.e., SAC, DIAYN, QSD-RL, and DLPG). 
+              This comparative analysis is conducted in real-world scenarios, where we evaluate the robustness of each model in dealing with noisy depth images, which can significantly impact their performance. 
+              By examining both the success rates and the diversity of the generated options, we aim to demonstrate the effectiveness and adaptability of our proposed method in various manipulation tasks.
+            </h2>
+          </ßßßdiv>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Real world experimental videos -->
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+  <!-- Paper video. -->
+  <!-- <h2 class="title is-3">Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+  <!-- Youtube embed code here -->
+  <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="assets/pdfs/2024_IROS_VPI_v04.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{lee2024visual,
+          title={Visual Preference Inference: An Image Sequence-Based Preference Reasoning in Tabletop Object Manipulation}, 
+          author={Joonhyung Lee and Sangbeom Park and Yongin Kwon and Jemin Lee and Minwook Ahn and Sungjoon Choi},
+          year={2024},
+          eprint={2403.11513},
+          archivePrefix={arXiv},
+          primaryClass={cs.RO}
+        }
+      </code></pre>
+    </div>
+  </section> -->
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+
+  timeoutIds = [];
+
+  function populateDemo(imgs, num) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg-" + num);
+    // Get the image text
+    var imgText = document.getElementById("imgtext-" + num);
+    var answer = document.getElementById("answer-" + num);
+
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src.replace(".png", ".mp4");
+    var video = document.getElementById('demo-video-' + num);
+    // or video = $('.video-selector')[0];
+    video.pause()
+    video.load();
+    video.play();
+    video.removeAttribute('controls');
+
+    console.log(expandImg.src);
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    var qa = imgs.alt.split("[sep]");
+    imgText.innerHTML = qa[0];
+    answer.innerHTML = "";
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+    for (timeoutId of timeoutIds) {
+      clearTimeout(timeoutId);
+    }
+
+    // NOTE (wliang): Modified from original to read from file instead
+    fetch(qa[1])
+      .then(response => response.text())
+      .then(contents => {
+        // Call the processData function and pass the contents as an argument
+        typeWriter(contents, 0, qa[0], num);
+      })
+      .catch(error => console.error('Error reading file:', error));
+  }
+
+  function typeWriter(txt, i, q, num) {
+    var imgText = document.getElementById("imgtext-" + num);
+    var answer = document.getElementById("answer-" + num);
+    if (imgText.innerHTML == q) {
+      for (let k = 0; k < 5; k++) {
+        if (i < txt.length) {
+          if (txt.charAt(i) == "\\") {
+            answer.innerHTML += "\n";
+            i += 1;
+          } else {
+            answer.innerHTML += txt.charAt(i);
+          }
+          i++;
+        }
+      }
+      hljs.highlightAll();
+      timeoutIds.push(setTimeout(typeWriter, 1, txt, i, q, num));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var images = document.querySelectorAll('.image');
+    images.forEach(function(image) {
+      image.addEventListener('click', function() {
+        var href = this.getAttribute('data-href');
+        if (href) {
+          window.location.href = href;
+        }
+      });
+    });
+  });
+</script>
+
+</html>
