@@ -10,4 +10,4 @@ Initial code released.
 
 Official Implementation of the paper ***Visual Preference Inference: An Image Sequence-Based Preference Reasoning in Tabletop Object Manipulation***
 
-![fig_overview](https://github.com/park-sangbeom/smore/assets/images/fig3_smore_overview.png)
+![fig_overview](https://github.com/park-sangbeom/smore/raw/main/assets/images/fig3_smore_overview.png)
