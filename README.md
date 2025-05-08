@@ -11,3 +11,19 @@ Initial code released.
 Official Implementation of the paper ***Quality-diversity based Semi-Autonomous Teleoperation using Reinforcement Learning***
 
 ![fig_overview](https://github.com/park-sangbeom/smore/raw/main/assets/images/fig3_smore_overview.png)
+
+## 🛠️ Requirements & Installation
+
+This project requires **Python 3.11.0**.  
+We recommend using a virtual environment to avoid dependency issues.
+
+```bash
+pip install -r requirements.txt
+```
+
+## 🚀 How to Run
+
+Use the following command to launch the QD-based RL framework
+
+```python
+python smore_main.py         
