@@ -6,7 +6,7 @@ Initial code released.
 
 # Quality-diversity based Semi-Autonomous Teleoperation using Reinforcement Learning
 
-[ [Project Page](https://park-sangbeom.github.io/smore/) | [Paper](https://www.sciencedirect.com/science/article/pii/S0893608024004672) | Video ]
+[ [Project Page](https://park-sangbeom.github.io/smore/) | [Paper](https://www.sciencedirect.com/science/article/pii/S0893608024004672)]
 
 Official Implementation of the paper ***Quality-diversity based Semi-Autonomous Teleoperation using Reinforcement Learning***
 
