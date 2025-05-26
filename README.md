@@ -1,6 +1,6 @@
 # News
 
-We are happy to announce that **SMORE** has been accepted to Neural Networks (IF: 7.8)! 😆🎉🎉
+**SMORE** was published in Neural Networks (IF 7.8), a JCR Top 10% journal in Computer Science, Artificial Intelligence, and Neurosciences.
 
 Initial code released.
 
